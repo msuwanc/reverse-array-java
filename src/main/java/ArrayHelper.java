@@ -13,4 +13,16 @@ public class ArrayHelper {
 
         return result;
     }
+
+    int[] reverse(int[] array) {
+        int middle = array.length / 2;
+
+        for(int i = 0; i < middle; i++) {
+            int tempValue = array[i];
+            array[i] = array[array.length -(i+1)];
+            array[array.length - (i+1)] = tempValue;
+        }
+
+        return array;
+    }
 }
